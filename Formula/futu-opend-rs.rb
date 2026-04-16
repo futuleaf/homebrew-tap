@@ -1,13 +1,16 @@
 class FutuOpendRs < Formula
   desc "Rust implementation of FutuOpenD trading gateway (TCP/REST/gRPC/WS/MCP)"
   homepage "https://futuapi.com/"
-  version "1.4.5"
+  version "1.4.8"
   license :cannot_represent # Proprietary Free Software
 
+  # v1.4.8 因为 GitHub Actions 配额耗尽，只手工打了 macos-arm64 + linux-x86_64 两个
+  # 平台 tarball。macos-x86_64 和 linux-aarch64 的 URL 会 404（sha256 保留旧占位值），
+  # CI 恢复后下一版同步补齐。大多数用户都在 Apple Silicon Mac 或 x86_64 Linux 上。
   on_macos do
     if Hardware::CPU.arm?
       url "https://futuapi.com/releases/rs-v#{version}/futu-opend-rs-#{version}-macos-arm64.tar.gz"
-      sha256 "778983a22d9812c99de616884db8a02d83d770ffa12cf722196b4f68f4b97393"
+      sha256 "a2ba91545c06d1015e854741c6860a74c6f82a07dc73cbefadb6e4f5f35a7ad0"
     else
       url "https://futuapi.com/releases/rs-v#{version}/futu-opend-rs-#{version}-macos-x86_64.tar.gz"
       sha256 "eea779c3292f6eb705482c2a9b105df53534b8cb35b14a0c739a1335b2bde9b6"
@@ -20,7 +23,7 @@ class FutuOpendRs < Formula
       sha256 "74748509676ecf66dfc26329559fbfec5736e8394994ed40fd8b5bc9576f99fb"
     else
       url "https://futuapi.com/releases/rs-v#{version}/futu-opend-rs-#{version}-linux-x86_64.tar.gz"
-      sha256 "ce05d14f8095140f1a4526ec6535d070c1af341107455392910da647d8c1d367"
+      sha256 "35f32dc5712fbc45eabdb377a8ba882eb9d5770dcc1b052ea05c061144fad88d"
     end
   end
 
