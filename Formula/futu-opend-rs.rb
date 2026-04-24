@@ -1,7 +1,7 @@
 class FutuOpendRs < Formula
   desc "Rust implementation of FutuOpenD trading gateway (TCP/REST/gRPC/WS/MCP)"
   homepage "https://futuapi.com/"
-  version "1.4.88"
+  version "1.4.89"
   license :cannot_represent # Proprietary Free Software
 
   # v1.4.8 因为 GitHub Actions 配额耗尽，只手工打了 macos-arm64 + linux-x86_64 两个
@@ -10,20 +10,20 @@ class FutuOpendRs < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://futuapi.com/releases/rs-v#{version}/futu-opend-rs-#{version}-macos-arm64.tar.gz"
-      sha256 "f55347baad3c0b50e72ddf119c1508da286b8208c5ade19cb3d7ba778bab5c43"
+      sha256 "7b59a33b25df6229419a38561c226dc18401150dfd5422bc91a16b410c447fcd"
     else
       url "https://futuapi.com/releases/rs-v#{version}/futu-opend-rs-#{version}-macos-x86_64.tar.gz"
-      sha256 "d2a1751be1862d0ca9c956f9b4d144d169faedd801477f10d9c8cd8e7186d47f"
+      sha256 "1e519d775bf4fa08c65c730c5bde05df7d356c577750bd16963da892de0fd904"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://futuapi.com/releases/rs-v#{version}/futu-opend-rs-#{version}-linux-aarch64.tar.gz"
-      sha256 "c218a7139140f22dc787f9b7e8a5b8c28c528936f49e695eeddced5d93c5a822"
+      sha256 "af727c95c33cabb9f935695cf48bc0081c34a4526ebf4e5e388c2c8b625eec3e"
     else
       url "https://futuapi.com/releases/rs-v#{version}/futu-opend-rs-#{version}-linux-x86_64.tar.gz"
-      sha256 "00ffc437650d05fb1c1f7dc61f321224d589467b083277ecd2f3deb11b0ebd94"
+      sha256 "eb1c65eb288aba6472e5747cbbc4c20bfda53f921311fb70c8069c252023a1e2"
     end
   end
 
