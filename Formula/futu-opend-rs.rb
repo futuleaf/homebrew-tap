@@ -10,20 +10,20 @@ class FutuOpendRs < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://futuapi.com/releases/rs-v#{version}/futu-opend-rs-#{version}-macos-arm64.tar.gz"
-      sha256 "7eddfde3f80fa1ee9a529d85fc415f5a47da4e50ff83ba79b26e77655a94e8eb"
+      sha256 "4d3f69148177aa8d92adac7bcdea699bd5ec314842ac70e6538ad28f240b9c1a"
     else
       url "https://futuapi.com/releases/rs-v#{version}/futu-opend-rs-#{version}-macos-x86_64.tar.gz"
-      sha256 "f195367e1b7123bd869a0791e75c8413cd45a9a9623c2e12209ca3abdb87b61d"
+      sha256 "441f56fb81c5c7cd01760d66e0bf379e180e26344ce487ca4d3030480edce027"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://futuapi.com/releases/rs-v#{version}/futu-opend-rs-#{version}-linux-aarch64.tar.gz"
-      sha256 "440edf2c39e4f92131a26af935dda32fcb4bd4cc31ad29f59bed64ece7608f18"
+      sha256 "37a81299b8da48cb088a37d1f0d4857b8295b18726f2d9cbfe2e2c86f6f3aa97"
     else
       url "https://futuapi.com/releases/rs-v#{version}/futu-opend-rs-#{version}-linux-x86_64.tar.gz"
-      sha256 "6c0ee400a037ed34a422eb7878d647f403bf79575c07aaf0eb9b3bd1a50ce22c"
+      sha256 "3f0db4e3551344b99c1ba6b6b9d80f2949f84701bb98acc476d42a6c542c2559"
     end
   end
 
